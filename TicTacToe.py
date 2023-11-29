@@ -12,4 +12,11 @@ def print_board(board):
     print(board[6] + '|' + board[7] + '|' + board[8])
 
 
-print_board(board)
+def player_input(board):
+    inp = int(input('Enter a Number (1-9):'))
+    if board[inp-1]=='-':
+        board[inp-1] = current_player
+    else:
+        print('Oops Space is occupied..!!!')
+
+
